@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Biblioteca</title>
+</head>
+<body>
+    <header>
+        <h1>Biblioteca Virtual</h1>
+        <div id="carritoIcon">Carrito (<span>0</span>)</div>
+
+    </header>
+
+    <main>
+        <div id="productos"></div>
+        <aside id="carrito" class="inactive">
+            <h2>Carrito de Compras</h2>
+            <div id="productosCarrito"></div>
+            <p>Total: $<span id="total">0</span></p>
+            <button id="botonQueLimpia" class="btn-limpiar">Limpiar Carrito</button>
+            <button id="botonComprar" class="btn-comprar">Comprar</button>
+        </aside>
+    </main>
+
+    <script src="main.js"> </script>
+</body>
+</html>
