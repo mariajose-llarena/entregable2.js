@@ -22,7 +22,7 @@ function botonesComprar() {
     Array.from(botones).forEach(el => {
         el.addEventListener("click", (evento) => {
             let nombre = evento.target.parentElement.children[0].innerText;
-            // Cambiar esta línea para acceder correctamente al precio
+           
             let precio = Number(evento.target.parentElement.querySelector("span").innerText);
             let cantidadInput = evento.target.parentElement.querySelector(".cantidadInput").value;
             let cantidad = Number(cantidadInput) || 1;
@@ -73,13 +73,13 @@ function actualizadoraCarrito() {
         </div>`;
     });
 
-    // Calcular total
+  
     const totalValue = Carrito.reduce((acc, el) => acc + (el.precio * el.cantidad), 0);
 
-    // Asegurarse de que totalValue sea un número válido
+ 
     total.innerText = isNaN(totalValue) ? '0' : `${totalValue}`;
 
-    // Actualizar icono del carrito
+  
     document.getElementById("carritoIcon").children[0].innerText = Carrito.reduce((acc, el) => acc + el.cantidad, 0);
 
     localStorage.setItem("carrito", JSON.stringify(Carrito));
@@ -113,6 +113,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     botonesComprar();
 
-    // Actualizar carrito al cargar la página
+ 
     actualizadoraCarrito();
 });
